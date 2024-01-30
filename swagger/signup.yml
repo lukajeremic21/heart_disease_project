@@ -1,0 +1,40 @@
+# signup.yml
+definitions:
+  Patient:
+    type: object
+    properties:
+      first_name:
+        type: string
+        description: First name of the patient
+      last_name:
+        type: string
+        description: Last name of the patient
+      birthdate:
+        type: string
+        description: Birthdate of the patient
+      username:
+        type: string
+        description: Username for the patient's account
+      password:
+        type: string
+        description: Password for the patient's account
+
+paths:
+  /signup:
+    post:
+      summary: Register a new patient
+      parameters:
+      - in: body
+        name: body
+        schema:
+          $ref: '#/definitions/Patient'
+      responses:
+        201:
+          description: Patient registered successfully
+          schema:
+            type: object
+            properties:
+              message:
+                type: string
+        400:
+          description: Invalid input

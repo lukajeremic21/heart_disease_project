@@ -1,0 +1,31 @@
+# login.yml
+definitions:
+  Login:
+    type: object
+    properties:
+      username:
+        type: string
+        description: Username for the patient's account
+      password:
+        type: string
+        description: Password for the patient's account
+
+paths:
+  /login:
+    post:
+      summary: Log in a patient
+      parameters:
+      - in: body
+        name: body
+        schema:
+          $ref: '#/definitions/Login'
+      responses:
+        200:
+          description: Patient logged in successfully
+          schema:
+            type: object
+            properties:
+              message:
+                type: string
+        401:
+          description: Invalid username or password

@@ -1,0 +1,32 @@
+# measurments.yml
+paths:
+  /measurments:
+    get:
+      summary: Get measurements for the logged in patient
+      responses:
+        200:
+          description: Measurements retrieved successfully
+          schema:
+            type: array
+            items:
+              type: object
+              properties:
+                first_name:
+                  type: string
+                last_name:
+                  type: string
+                # Add properties for the fields in heartdiseasedata here
+        401:
+          description: Not logged in
+          schema:
+            type: object
+            properties:
+              message:
+                type: string
+        404:
+          description: Patient not found
+          schema:
+            type: object
+            properties:
+              error:
+                type: string
