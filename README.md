@@ -109,5 +109,3 @@ Description: Train a logistic regression model on historical heart disease data.
 10. Train Naive Bayes Model <a name="10-train-naive-bayes-model"></a>
 Endpoint: GET /trainNaiveBayes
 Description: Train a Naive Bayes model on historical heart disease data.
-5. Conclusion <a name="conclusion"></a>
-Congratulations! You have successfully set up and explored the Heart Disease Prediction System. If you encounter any issues or have questions, please refer to the documentation or contact our support team.
